@@ -289,51 +289,58 @@
 
     </div>
     <br />
-    <div class="container">
-        <h3 style="text-align: left;">CATEGORIES</h3>
-        <div class="row" style="padding: 0 50px;">
-            <div class="col-sm-4 col-md-4 sub-categories active">
-                WOMEN
-            </div>
-            <div class="col-sm-4 col-md-4 sub-categories">MEN</div>
-            <div class="col-sm-4 col-md-4 sub-categories">KIDS</div>
-        </div>
-        <div class="row" style="padding: 10px 55px;">
 
-            <div class="col-sm-4 col-md-4">
-                <div class="outware">
-                    OUTWARE
+    
+   
+        <div class="container">
+            <h3 style="text-align: left;">CATEGORIES</h3>
+            <div class="row" style="padding: 0 50px;">
+                <a onclick="change_section('women')"><div class="col-sm-4 col-md-4 sub-categories">WOMEN</div></a>
+                <a onclick="change_section('men')"><div class="col-sm-4 col-md-4 sub-categories">MEN</div></a>
+                <a onclick="change_section('kids')"><div class="col-sm-4 col-md-4 sub-categories">KIDS</div></a>
+            </div>
+
+         <div id="change_section">
+            <div class="row" style="padding: 10px 55px;">
+                <div class="col-sm-4 col-md-4">
+                    <div class="outware">
+                        OUTWARE
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="top">
+                        TOP
+                    </div>
+                </div>
+                 <div class="col-sm-4 col-md-4">
+                    <div class="jumpsuits">
+                        JUMPSUITS
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-md-4">
-                <div class="top">
-                    TOP
+            <div class="row" style="padding: 10px 55px;">
+               <div class="col-sm-4 col-md-4">
+                    <div class="jeans">
+                        JEANS
+                    </div>
                 </div>
-            </div>
-             <div class="col-sm-4 col-md-4">
-                <div class="jumpsuits">
-                    JUMPSUITS
+                 <div class="col-sm-4 col-md-4">
+                    <div class="bottoms">
+                        BOTTOMS
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="dresses">
+                        DRESSES
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row" style="padding: 10px 55px;">
-           <div class="col-sm-4 col-md-4">
-                <div class="jeans">
-                    JEANS
-                </div>
-            </div>
-             <div class="col-sm-4 col-md-4">
-                <div class="bottoms">
-                    BOTTOMS
-                </div>
-            </div>
-            <div class="col-sm-4 col-md-4">
-                <div class="dresses">
-                    DRESSES
-                </div>
-            </div>
+
+
         </div>
-    </div>
+
+
     <footer>
         <div class="container">
             <div class="row padding-footer">
@@ -376,5 +383,28 @@
         </div>
     </footer>
 </body>
+
+<script type="text/javascript">
+   
+    function change_section(param){
+      
+    $.ajax({
+        url : "change_section.php",
+        type: "POST",
+        data:{"id":param},
+      success: function(data)
+      {
+           $('#change_section').html(data);
+      },
+      error: function (jqXHR, textStatus, errorThrown)
+      {
+          alert('Error get data from ajax');
+      }
+    });
+
+    }
+
+
+</script>
 
 </html>
