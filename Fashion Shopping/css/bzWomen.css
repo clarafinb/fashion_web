@@ -1,0 +1,84 @@
+.width {
+  width: 25% !Important;
+}
+
+.womenTitle{
+    position: relative;;
+    width: 177px;
+    height: 60px;
+    left: 40px;
+    top: 0px;
+    font-family: Sunflower;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 60px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: rgba(255, 0, 0, 0.85);
+}
+
+.sideTab {
+    position: relative;
+    left: 43px;
+    top: -10px;
+    font-family: Sunflower;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.bzCollections{
+    width: 200px;
+    height: 25.28px;
+    font-weight: 1 !Important;
+    line-height: 25px !Important;
+    text-indent: 17px;
+    color: #000000;
+}
+
+.female11 {
+    position: absolute;
+    top: 30px;
+    width: 900px;
+    height: 450px;
+}
+
+.womenFooter {
+    position: relative;
+    top: 300px;
+}
+
+.left-sidebar-women {
+    padding: 10px;
+}
+
+h1.women-title {
+    color: red;
+    font-size: 36px !important;
+}
+
+h4.women-sub-title {
+    font-size: 16px !important;
+}
+
+p.bz-Collection {
+    padding-left: 10px;
+}
+
+ul.bz-Categories {
+    padding-left: 10px;
+}
+
+ul.bz-Categories a {
+    color: #333;
+    font-weight: 600;
+}
+
+.dress-container,.top-container, 
+.outwears-container, .bottoms-container {
+    margin-left: 10px; 
+}

@@ -1,0 +1,85 @@
+.login {
+    position: relative;
+    top: 0px
+}
+
+.loginTitle {
+    font-family: Sunflower;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 60px;
+}
+
+.loginText {
+    position: relative;
+    top: 20px
+}
+
+.loginDetails {
+    position:relative;
+    top: 31px
+}
+
+.forgotPassword {
+    color: red;
+    font-weight: bold;
+    position: relative;
+    top: 14px
+}
+
+.btnLoginRegister {
+    background: #000000;
+    border: 1.33178px solid rgba(6, 0, 0, 0.35);
+    border-radius: 3.99535px;
+    width: 265px;
+    height: 51px;
+    color: white;
+    font-weight: bold
+}
+
+.btnLoginRegister:hover {
+    color: white !Important;
+}
+
+.emailAddress {
+    position: relative;
+    top: 19px
+}
+
+.emailAddressSpan {
+    font-weight: bold;
+    position: relative;
+    top: 15px
+}
+
+.inputLogin {
+    width: 265px !Important;
+    height: 51px
+}
+
+.password {
+    position: relative;
+    top: 10px
+}
+
+.passwordSpan {
+    font-weight: bold;
+    position: relative;
+    top: 15px
+}
+
+.customerInfo {
+    position: relative;
+    top: 140px
+}
+
+.btnRegister {
+    position: relative;
+    top: 18px
+}
+
+.loginRegisterFooter {
+    position: relative;
+    top: 100px
+}

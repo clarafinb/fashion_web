@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>How TO - Menu Icon</title>
+	<link rel="stylesheet" href="css/menuicon.css">
+</head>
+
+	<body>
+	<div class="wrapper">
+	    <h4>Menu Icon:</h4>
+	    <div class="burgerIcon-0">
+	        <div class="bar-01"></div>
+	        <div class="bar-02"></div>
+	        <div class="bar-03"></div>
+	    </div>
+	    <h4>Animated Menu Icon (click on it):</h4>
+	    <div id="burgerIcon-1">
+	        <div class="bar-11"></div>
+	        <div class="bar-12"></div>
+	        <div class="bar-13"></div>
+	    </div>
+	    <script>
+            document.getElementById("burgerIcon-1")
+                .addEventListener("click", function(){
+                this.classList.toggle("active");
+            });
+        </script>
+	</div>
+
+</body>
+</html>

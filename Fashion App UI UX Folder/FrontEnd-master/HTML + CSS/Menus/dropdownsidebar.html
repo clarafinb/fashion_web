@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> How TO - Dropdown Sidebar </title>
+    <link rel="stylesheet" href="css/dropdownsidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="left-0">
+        <a href="javascript:void(0)">About</a>
+        <a href="javascript:void(0)">Services</a>
+        <a href="javascript:void(0)">Clients</a>
+        <a href="javascript:void(0)">Contact</a>
+        <div class="dropdown-0">
+            <button class="btn-0" id="btn0">Dropdown <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content-0" id="dropdowncontent0">
+                <a href="javascript:void(0)">Link 1</a>
+                <a href="javascript:void(0)">Link 2</a>
+                <a href="javascript:void(0)">Link 3</a>
+            </div>
+        </div>
+        <a href="javascript:void(0)">Search</a>
+    </div>
+    <script>
+        var btn0 = document.getElementById("btn0"); 
+        var dropdowncontent0 = document.getElementById("dropdowncontent0");
+        btn0.addEventListener("click", function(){
+            dropdowncontent0.classList.toggle("show");
+            btn0.classList.toggle("active");
+        });
+    </script>
+    <div class="right-0">
+        <h3>Sidebar Dropdown</h3>
+        <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+        <p>This sidebar is of full height (100%) and always shown.</p>
+        <p>Some random text..</p>
+    </div>
+
+</body>
+
+</html>

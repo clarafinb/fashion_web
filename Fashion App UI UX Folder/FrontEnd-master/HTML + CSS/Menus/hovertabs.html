@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>How TO - Hover Tabs</title>
+	<link rel="stylesheet" href="css/hovertabs.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="assign-0">
+            <div class="left-0">
+                <button class="button-0" id="active" onmouseover="openTab(this, 'London')">London</button>
+                <button class="button-0" onmouseover="openTab(this, 'Paris')">Paris</button>
+                <button class="button-0" onmouseover="openTab(this, 'Tokyo')">Tokyo</button>
+            </div>
+            <div class="right-0">
+                <div class="link-0" id="London">
+                    <h3>London</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+                <div class="link-0" id="Paris">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p>
+                </div>
+                <div class="link-0" id="Tokyo">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+        function openTab(event, city) {
+            event.removeAttribute("id");
+            var buttons = document.getElementsByClassName("button-0");
+            for (var i = 0; i < buttons.length; i++) {
+               buttons[i].style.background = "#eee";
+                
+            }
+            event.style.background = "#ccc";            
+            var links = document.getElementsByClassName("link-0");
+            for (var i = 0; i < links.length; i++) {
+               links[i].style.display = "none";
+            }
+            
+            document.getElementById(city).style.display = "block";
+        }
+        </script>
+    </div>
+</body>
+</html>

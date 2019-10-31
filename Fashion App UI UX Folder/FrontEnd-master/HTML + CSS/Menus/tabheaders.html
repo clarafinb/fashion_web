@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How TO - Tab Headers</title>
+    <link rel="stylesheet" href="css/tabheaders.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="assign-0">
+            <div class="tablink-0" id="London">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div class="tablink-0" id="Paris">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+            <div class="tablink-0" id="Tokyo">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div class="tablink-0" id="Oslo">
+                <h3>Oslo</h3>
+                <p>Oslo is the capital of Norway.</p>
+            </div>
+            <div class="tabs-0">
+                <button class="tabcontent-0" id="openDefault" onclick="openTab('London', this, 'red')">London</button>
+                <button class="tabcontent-0" onclick="openTab('Paris', this, 'green')">Paris</button>
+                <button class="tabcontent-0" onclick="openTab('Tokyo', this, 'blue')">Tokyo</button>
+                <button class="tabcontent-0" onclick="openTab('Oslo', this, 'orange')">Oslo</button>
+            </div>
+        </div>
+        <script>
+            function openTab(city, event, color) {
+                var content = document.getElementsByClassName("tabcontent-0");
+                for (var i = 0; i < content.length; i++) {
+                    content[i].style.background = "#ddd";
+                    content[i].style.color = "black";
+                }
+                event.style.background = color;
+                event.style.color = "white";
+                var link = document.getElementsByClassName("tablink-0");
+                for (var i = 0; i < link.length; i++) {
+                    link[i].style.display = "none";
+                }
+                document.getElementById(city).style.display = "block";
+            }
+            document.getElementById("openDefault").click();
+        </script>
+    </div>
+    <div class="wrapper">
+        <div class="tablink-1" id="ld-link">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div class="tablink-1" id="pr-link">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+        <div class="tablink-1" id="tk-link">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <div class="tablink-1" id="ol-link">
+            <h3>Oslo</h3>
+            <p>Oslo is the capital of Norway.</p>
+        </div>
+        <div class="tabs-1">
+            <button class="tabcontent-1" id="ld">London</button>
+            <button class="tabcontent-1" id="pr">Paris</button>
+            <button class="tabcontent-1" id="tk">Tokyo</button>
+            <button class="tabcontent-1" id="ol">Oslo</button>
+        </div>
+    </div>
+    <script>
+        var buttons = document.getElementsByClassName("tabcontent-1");
+        var links = document.getElementsByClassName("tablink-1");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function() {
+                for (var j = 0; j < links.length; j++) {
+                    links[j].style.display = "none";
+                }
+                document.getElementById(this.id + "-link").style.display = "block";
+                for (var j = 0; j < buttons.length; j++) {
+                    buttons[j].style.background = "#ddd";
+                    buttons[j].style.color = "black";
+                }
+                if (this.id === "ld") {
+                    this.style.background = "red";
+                } else if (this.id === "pr") {
+                    this.style.background = "green";
+                } else if (this.id === "tk") {
+                    this.style.background = "blue";
+                } else {
+                    this.style.background = "orange";
+                }
+                this.style.color = "white";
+            });
+        }
+    </script>
+</body>
+
+</html>

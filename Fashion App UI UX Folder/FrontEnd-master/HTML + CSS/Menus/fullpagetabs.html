@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>How TO - Full Page Tabs</title>
+	<link rel="stylesheet" href="css/fullpagetabs.css">
+</head>
+
+	<body>
+	<div class="wrapper">
+	    <div class="assign-0">
+	        <div class="tabs-0">
+	            <button class="tabcontent-0" id="openDefault" onclick="openTab('Home', this, 'red')">Home</button>
+	            <button class="tabcontent-0" onclick="openTab('News', this, 'green')">News</button>
+	            <button class="tabcontent-0" onclick="openTab('Contact', this, 'blue')">Contact</button>
+	            <button class="tabcontent-0" onclick="openTab('About', this, 'orange')">About</button>
+	        </div>
+	        <div class="tablink-0" id="Home">
+	            <h2>Home</h2>
+	            <p>Home is where the heart is..</p>
+	        </div>
+	        <div class="tablink-0" id="News">
+	            <h2>News</h2>
+	            <p>Some news this fine day!</p>
+	        </div>
+	        <div class="tablink-0" id="Contact">
+	            <h2>Contact</h2>
+	            <p>Get in touch, or swing by for a cup of coffee.</p>
+	        </div>
+	        <div class="tablink-0" id="About">
+	            <h2>About</h2>
+	            <p>Who we are and what we do.</p>
+	        </div>
+	    </div>
+	    <script>
+            function openTab(tab, event, color) {
+                var tabs = document.getElementsByClassName("tabcontent-0");
+                var links = document.getElementsByClassName("tablink-0");
+                for (var i = 0; i < tabs.length; i++) {
+                    tabs[i].style.background = "#ddd";
+                    tabs[i].style.color = "black";
+                }
+                
+                event.style.color = "white";
+                event.style.background = color;
+                
+                for (var i = 0; i < links.length; i++) {
+                    links[i].style.display = "none";
+                }
+                
+                document.getElementById(tab).style.display = "block";
+                document.getElementById(tab).style.background = color;
+            }
+            document.getElementById("openDefault").click();
+        </script>
+	</div>
+    <div class="wrapper">
+        <div class="assign-1">
+            <div class="tabs-1">
+	            <button class="tabcontent-1" id="ho">Home</button>
+	            <button class="tabcontent-1" id="ne">News</button>
+	            <button class="tabcontent-1" id="co">Contact</button>
+	            <button class="tabcontent-1" id="ab">About</button>
+	        </div>
+	        <div class="tablink-1" id="ho-link">
+	            <h2>Home</h2>
+	            <p>Home is where the heart is..</p>
+	        </div>
+	        <div class="tablink-1" id="ne-link">
+	            <h2>News</h2>
+	            <p>Some news this fine day!</p>
+	        </div>
+	        <div class="tablink-1" id="co-link">
+	            <h2>Contact</h2>
+	            <p>Get in touch, or swing by for a cup of coffee.</p>
+	        </div>
+	        <div class="tablink-1" id="ab-link">
+	            <h2>About</h2>
+	            <p>Who we are and what we do.</p>
+	        </div>
+        </div>
+        <script>
+            var buttons = document.getElementsByClassName("tabcontent-1");
+            var contents = document.getElementsByClassName("tablink-1");
+            for (var i = 0 ; i < buttons.length; i++) {
+                buttons[i].addEventListener("click", function(){
+                    for (var j = 0; j < contents.length; j++){
+                        contents[j].style.display = "none";
+                    }
+                    document.getElementById(this.id + "-link").style.display = "block";
+                    
+                    for (var j = 0; j < buttons.length; j++){
+                        buttons[j].style.background = "#ddd";
+                        buttons[j].style.color = "black";
+                    }
+                    
+                    
+                    this.style.color = "white";
+                    
+                    if (this.id === "ho") {
+                        this.style.background = "red";
+                    } else if (this.id === "ne") {
+                        this.style.background = "green";       
+                               } else if (this.id === "co") {
+                                   this.style.background = "blue";
+                               } else {
+                                   this.style.background = "orange";
+                               }
+                    
+                });
+            }
+        </script>
+    </div>
+</body>
+</html>

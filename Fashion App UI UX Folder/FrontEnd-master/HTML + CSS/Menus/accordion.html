@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How TO - Collapsibles/Accordion</title>
+    <link rel="stylesheet" href="css/accordion.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="assign-0">
+            <div class="section" id="section-1" onclick="openTab('section-1')">Section 1</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="section" id="section-2" onclick="openTab('section-2')">Section 2</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="section" id="section-3" onclick="openTab('section-3')">Section 3</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <script>
+            function openTab(tabName) {
+                var x = document.getElementById(tabName);
+                x.classList.toggle("active");
+                var next = x.nextElementSibling;
+                if (next.style.display === "block") {
+                    next.style.display = "none";
+                } else {
+                    next.style.display = "block";
+                }
+
+            }
+
+
+//            var x = document.getElementsByClassName("section");
+//            for (var i = 0; i < x.length; i++) {
+//                x[i].addEventListener('click', function() {
+//                    this.classList.toggle("active");
+//                    var next = this.nextElementSibling;
+//                    if (next.style.display === "block") {
+//                        next.style.display = "none";
+//                    } else {
+//                        next.style.display = "block";
+//                    }
+//                });
+//            }
+        </script>
+    </div>
+</body>
+
+</html>

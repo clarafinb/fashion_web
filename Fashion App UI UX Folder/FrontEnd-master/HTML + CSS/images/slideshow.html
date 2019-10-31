@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How TO - Slideshow</title>
+    <link rel="stylesheet" href="css/slideshow.css">
+</head>
+<body>
+    <div class="imagesGroup">
+        <div class="imageContainer fade" id="0">
+            <span>1 / 4</span>
+            <p class="image"><img src="images/img_nature_wide.jpg"></p>
+            <p class="caption">Caption One</p>
+        </div>
+        <div class="imageContainer fade" id="1">
+            <span>2 / 4</span>
+            <p class="image"><img src="images/img_snow_wide.jpg"></p>
+            <p class="caption"> Caption Two </p>
+        </div>
+        <div class="imageContainer fade" id="2">
+            <span>3 / 4</span>
+            <p class="image"><img src="images/img_lights_wide.jpg"></p>
+            <p class="caption"> Caption Three </p>
+        </div>
+        <div class="imageContainer fade" id="3">
+            <span>4 / 4</span>
+            <p class="image"><img src="images/img_mountains_wide.jpg"></p>
+            <p class="caption"> Caption Four </p>
+        </div>
+        <a class="prev" href="javascript:void(0)" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="last" href="javascript:void(0)" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dots">
+        <a class="dot" id="openDefault" href="javascript:void(0)" onclick="currentSlide(0)"></a>
+        <a class="dot" href="javascript:void(0)" onclick="currentSlide(1)"></a>
+        <a class="dot" href="javascript:void(0)" onclick="currentSlide(2)"></a>
+        <a class="dot" href="javascript:void(0)" onclick="currentSlide(3)"></a>
+    </div>
+    <script>
+        var current;
+        function currentSlide(slide) {            
+            var containers = document.getElementsByClassName("imageContainer");
+            var dots = document.getElementsByClassName("dot");
+            if (slide > containers.length - 1) {
+                slide = slide - (containers.length); 
+            } 
+            
+            if (slide < 0) {
+                slide = 3;
+            }
+            
+            for (var i = 0; i< containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+            
+            for (var i = 0; i< dots.length; i++) {
+                dots[i].classList.remove("active");
+                if (i === slide) {
+                    dots[i].classList.add("active");
+                }
+            }
+            
+            document.getElementById(slide).style.display = "block";
+            current = slide;
+        }
+        document.getElementById("openDefault").click();
+        
+        function plusSlides(slide) {
+            currentSlide(current + slide);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.wrapper {
+    margin: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.7);
+}
+
+/* ------------------ assign-0 ------------------ */
+
+.assign-0 {
+    border: 1px solid #bbb;
+    display: flex;
+    height: 350px;
+}
+
+
+.left-0 {
+    flex: 30%;
+    border-right: 1px solid #bbb;
+}
+
+.left-0 a {
+    display: block;
+    padding: 20px 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.left-0 a.active {
+    background: #ddd;
+}
+
+.right-0 {
+    flex: 70%;
+    padding: 10px;
+}
+
+.right-0 h4 {
+    margin-bottom: 10px;
+}
+
+#paris-content,
+#tokyo-content {
+    display: none;
+}
+
+/* ------------------ assign-1 ------------------ */
+.assign-1 {
+    border: 1px solid #bbb;
+    display: flex;
+    height: 350px;
+}
+
+.left-1 {
+    flex: 30%;
+    border-right: 1px solid #bbb;
+}
+
+.left-1 button.tabcontent {
+    display: block;
+    width: 100%;
+    padding: 20px 10px;
+    border: none;
+    font-size: 16px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+
+.right-1 {
+    flex: 70%;
+    padding: 10px;
+}
+
+.right-1 h4 {
+    margin-bottom: 10px;
+}

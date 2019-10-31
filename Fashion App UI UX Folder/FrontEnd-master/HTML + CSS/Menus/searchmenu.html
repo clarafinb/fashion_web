@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How TO - Search Menu</title>
+    <link rel="stylesheet" href="css/searchhtml.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="assign-0">
+            <div class="left-0">
+                <h3>Menu</h3>
+                <input id="search" type="text" placeholder="Search..." />
+                <a class="item" href="javascript:void(0)">HTML</a>
+                <a class="item" href="javascript:void(0)">CSS</a>
+                <a class="item" href="javascript:void(0)">Javascript</a>
+                <a class="item" href="javascript:void(0)">PHP</a>
+                <a class="item" href="javascript:void(0)">Python</a>
+                <a class="item" href="javascript:void(0)">jQuery</a>
+                <a class="item" href="javascript:void(0)">SQL</a>
+                <a class="item" href="javascript:void(0)">Bootstrap</a>
+                <a class="item" href="javascript:void(0)">Node.js</a>
+            </div>
+            <div class="right-0">
+                <h3>Page Content</h3>
+                <p>Start to type for a specific category/link inside the search bar to "filter" the search options.</p>
+                <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+                <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+                <p>Some text..</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var search = document.getElementById("search");        
+        search.addEventListener("keyup", function() {  
+            var items = document.getElementsByClassName("item");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.display = "none";
+            }
+            
+            var value = search.value.toUpperCase();
+            var tagNames = document.getElementsByTagName("a");
+            for (var i = 0; i < tagNames.length; i++) {
+                if(tagNames[i].innerHTML.toUpperCase().indexOf(value) > -1) {
+                    items[i].style.display = "block";
+                }
+            }
+            
+        });
+    </script>
+</body>
+
+</html>

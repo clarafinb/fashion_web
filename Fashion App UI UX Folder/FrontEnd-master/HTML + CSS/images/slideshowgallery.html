@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>How TO - Slideshow Gallery</title>
+	<link rel="stylesheet" href="css/slideshowgallery.css">
+</head>
+
+	<body>
+	<div class="wrapper">
+	    <div class="largeImages">
+	        <div class="imageContainer fade" id="0">
+	            <span>1 / 6</span>
+	            <p class="image"><img src="images/img_woods_wide.jpg" alt="the wood"></p>
+	            <p class="caption">The Woods</p>
+	        </div>
+	        <div class="imageContainer fade" id="1">
+	            <span>2 / 6</span>
+	            <p class="image"><img src="images/img_5terre_wide.jpg" alt="cinque terre"></p>
+	            <p class="caption">Cinque Terre</p>
+	        </div>
+	        <div class="imageContainer fade" id="2">
+	            <span>3 / 6</span>
+	            <p class="image"><img src="images/img_mountains_wide.jpg" alt="mountains and fjords"></p>
+	            <p class="caption">Mountains and fjords</p>
+	        </div>
+	        <div class="imageContainer fade" id="3">
+	            <span>4 / 6</span>
+	            <p class="image"><img src="images/img_lights_wide.jpg" alt="northern lights"></p>
+	            <p class="caption">Northern Lights</p>
+	        </div>
+	        <div class="imageContainer fade" id="4">
+	            <span>5 / 6</span>
+	            <p class="image"><img src="images/img_nature_wide.jpg" alt="nature and sunrise"></p>
+	            <p class="caption">Nature and sunrise</p>
+	        </div>
+	        <div class="imageContainer fade" id="5">
+	            <span>6 / 6</span>
+	            <p class="image"><img src="images/img_snow_wide.jpg" alt="snowy mountains"></p>
+	            <p class="caption">Snowy Mountains</p>
+	        </div>
+	        <a class="prev" href="javascript:void(0)" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="last" href="javascript:void(0)" onclick="plusSlides(1)">&#10095;</a>
+	    </div>
+	    <div class="smallImages">
+	        <a id="openDefault"  href="javascript:void(0)" onclick="currentSlide(0)"><img class="small" src="images/img_woods_wide.jpg" alt="the wood"></a>
+            <a href="javascript:void(0)" onclick="currentSlide(1)"><img class="small"  src="images/img_5terre_wide.jpg" alt="cinque terre"></a>
+            <a href="javascript:void(0)" onclick="currentSlide(2)"><img class="small" src="images/img_mountains_wide.jpg" alt="mountains and fjords"></a>
+            <a href="javascript:void(0)" onclick="currentSlide(3)"><img class="small" src="images/img_lights_wide.jpg" alt="northern lights"></a>
+            <a href="javascript:void(0)" onclick="currentSlide(4)"><img class="small" src="images/img_nature_wide.jpg" alt="nature and sunrise"></a>
+            <a href="javascript:void(0)" onclick="currentSlide(5)"><img class="small" src="images/img_snow_wide.jpg" alt="snowy mountains"></a>
+	    </div>
+	    <script>
+        var current;
+        function currentSlide(slide) {            
+            var containers = document.getElementsByClassName("imageContainer");
+            var smalls = document.getElementsByClassName("small");
+            if (slide > containers.length - 1) {
+                slide = slide - (containers.length); 
+            } 
+            
+            if (slide < 0) {
+                slide = 5;
+            }
+            
+            for (var i = 0; i< containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+            
+            for (var i = 0; i< smalls.length; i++) {
+                smalls[i].classList.remove("active");
+                if (i === slide) {
+                    smalls[i].classList.add("active");
+                }
+            }
+            
+            document.getElementById(slide).style.display = "block";
+            current = slide;
+        }
+        document.getElementById("openDefault").click();
+        
+        function plusSlides(slide) {
+            currentSlide(current + slide);
+        }
+    </script>
+	</div>
+
+</body>
+</html>

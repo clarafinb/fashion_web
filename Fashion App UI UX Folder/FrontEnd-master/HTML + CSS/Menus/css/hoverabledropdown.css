@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.wrapper {
+    margin: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.7);
+}
+/* ----------------------- Assignment-0 ----------------------- */
+.assign-0 .btn-0 {
+    padding: 10px 20px;
+    border: none;
+    background: #f55b2f;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-0:hover {
+    background: red;
+}
+
+.hover-0 {
+    background: #eee;
+    width: 200px;
+    display: none;
+    position: absolute;
+}
+
+.hover-0 a {
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+}
+
+.hover-0 a:hover {
+    background: #ddd;
+}
+
+.assign-0:hover .hover-0 {
+    display: block;
+}
+/* ----------------------- Assignment-1 ----------------------- */
+.assign-1 {
+    overflow: hidden;
+}
+
+.left-1 {
+    float: left;
+}
+
+.right-1 {
+    float: right;
+}
+
+.left-1 .btn-11 {
+    padding: 10px 20px;
+    border: none;
+    background: #f55b2f;
+    color: white;
+    font-size: 16px;
+}
+
+.right-1 .btn-21 {
+    padding: 10px 20px;
+    border: none;
+    background: #f55b2f;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-11:hover {
+    background: red;
+}
+
+.hover-11 {
+    background: #eee;
+    width: 200px;
+    display: none;
+    position: absolute;
+}
+
+.hover-11 a {
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+}
+
+.hover-11 a:hover {
+    background: #ddd;
+}
+
+.left-1:hover .hover-11 {
+    display: block;
+}
+
+.btn-11:hover {
+    background: red;
+}
+
+.hover-21 {
+    background: #eee;
+    width: 200px;
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+.hover-21 a {
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+}
+
+.hover-21 a:hover {
+    background: #ddd;
+}
+
+.right-1:hover .hover-21 {
+    display: block;
+}
+
+/* ----------------------- Assignment-2 ----------------------- */
+.assign-2 {
+    background: #444;
+    overflow: hidden;
+}
+
+.assign-2 a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    float: left;
+    padding: 10px 20px;
+}
+
+.assign-2 a:hover {
+    background: red;
+}
+
+.assign-2 .dropdown-2 {
+    float: left;
+    overflow: hidden;
+}
+
+.assign-2 .dropdown-2:hover {
+    background: red;
+}
+
+.dropdown-2 .btn-2 {
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    background: inherit;
+}
+
+.dropdowncontent-2 {
+    width: 200px;
+    background: white;
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdowncontent-2 a {
+    display: block;
+    float: none;
+    color: black;
+}
+
+.dropdowncontent-2 a:hover {
+    background: #ddd;
+}
+
+.dropdown-2:hover .dropdowncontent-2 {
+    display: block;
+}
